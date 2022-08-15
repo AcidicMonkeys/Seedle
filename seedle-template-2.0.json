@@ -3,14 +3,13 @@
     "templates": [
       {
         "type": 1,
-        "name": "A",
         "title": "Registry",
         "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
         "categories": [
           "docker"
         ],
         "platform": "linux",
-        "logo": "https://github.com/AcidicMonkeys/Seedle/blob/main/images/docker/registry.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/registry.png",
         "image": "registry:latest",
         "ports": [
           "5000/tcp"
