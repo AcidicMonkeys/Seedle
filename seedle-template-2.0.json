@@ -1311,13 +1311,14 @@
       {
         "type": 1,
         "title": "Redmine",
-        "description": "Open-source project management tool",
-        "note": "Default user and password are admin/admin",
+        "name": "Redmine",
+        "description": "Redmine is a free and open source, web-based project management and issue tracking tool. It allows users to manage multiple projects and associated subprojects. It features per project wikis and forums, time tracking, and flexible, role-based access control.",
         "categories": [
-          "project-management"
+          "Project Management"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/project-management/redmine.png",
+        "hostname": "redmine",
         "image": "redmine:latest",
         "ports": [
           "3000/tcp"
@@ -1327,21 +1328,6 @@
             "container": "/usr/src/redmine/files"
           }
         ]
-      },
-      {
-        "type": 2,
-        "title": "Portainer Agent",
-        "description": "Manage all the resources in your Swarm cluster",
-        "note": "The agent will be deployed globally inside your cluster and available on port 9001.",
-        "categories": [
-          "portainer"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/portainer-agent/docker-stack.yml"
-        }
       }
     ]
   }
