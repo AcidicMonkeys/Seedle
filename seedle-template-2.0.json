@@ -25,12 +25,14 @@
       {
         "type": 1,
         "title": "Ubuntu",
-        "description": "Debian-based Linux operating system",
+        "name": "Ubuntu",
+        "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
         "categories": [
           "os"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
+        "hostname": "ubuntu",
         "image": "ubuntu:latest",
         "interactive": true,
         "command": "/bin/bash"
