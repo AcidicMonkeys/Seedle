@@ -389,8 +389,8 @@
       },
       {
         "type": 1,
-        "title": "Microsoft SQL Server",
-        "name": "Microsoft-SQL-Server",
+        "title": "Microsoft SQL Server (Linux)",
+        "name": "Microsoft-SQL-Server-Linux",
         "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.",
         "categories": [
           "Database"
@@ -398,7 +398,7 @@
         "platform": "linux",
         "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
-        "hostname": "microsoft-sql-server",
+        "hostname": "microsoft-sql-server-linux",
         "image": "mcr.microsoft.com/mssql/server:2019-latest",
         "ports": [
           "1433/tcp"
@@ -417,8 +417,8 @@
       },
       {
         "type": 1,
-        "title": "Microsoft SQL Server",
-        "name": "Microsoft-SQL-Server",
+        "title": "Microsoft SQL Server (Windows)",
+        "name": "Microsoft-SQL-Server-Windows",
         "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.",
         "categories": [
           "Database"
@@ -426,7 +426,7 @@
         "platform": "windows",
         "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
-        "hostname": "microsoft-sql-server",
+        "hostname": "microsoft-sql-server-windows",
         "image": "microsoft/mssql-server-windows-developer:latest",
         "ports": [
           "1433/tcp"
