@@ -31,7 +31,7 @@
           "runtime environment"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/node.png",
         "hostname": "nodejs-debian",
         "image": "node:latest",
         "interactive": true,
@@ -46,7 +46,7 @@
           "runtime environment"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/node.png",
         "hostname": "nodejs-alpine",
         "image": "node:current-alpine",
         "interactive": true,
@@ -61,7 +61,7 @@
           "runtime environment"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/python.png",
         "hostname": "python-debian",
         "image": "python:latest",
         "interactive": true,
@@ -76,9 +76,9 @@
           "runtime environment"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/python.png",
         "hostname": "python-alpine",
-        "image": "python:3.11.0rc1-alpine3.16",
+        "image": "python:3.11-rc-alpine3.15",
         "interactive": true,
         "command": "/bin/ash"
       },
@@ -91,7 +91,7 @@
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/alpine.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/alpine.png",
         "hostname": "alpine",
         "image": "alpine:latest",
         "interactive": true,
@@ -106,7 +106,7 @@
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/amazonlinux.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/amazonlinux.png",
         "hostname": "amazonlinux",
         "image": "amazonlinux:latest",
         "interactive": true,
@@ -121,7 +121,7 @@
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/archlinux.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/archlinux.png",
         "hostname": "archlinux",
         "image": "archlinux:latest",
         "interactive": true,
@@ -136,9 +136,24 @@
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/debian.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
         "hostname": "debian",
         "image": "ubuntu:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "OracleLinux",
+        "name": "OracleLinux",
+        "description": "Oracle Linux is a Linux distribution packaged and freely distributed by Oracle, available partially under the GNU General Public License since late 2006. It is compiled from Red Hat Enterprise Linux source code, replacing Red Hat branding with Oracle's.",
+        "categories": [
+          "os"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/oraclelinux.png",
+        "hostname": "oraclelinux",
+        "image": "oraclelinux:latest",
         "interactive": true,
         "command": "/bin/bash"
       },
@@ -151,7 +166,7 @@
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/ubuntu.png",
         "hostname": "ubuntu",
         "image": "ubuntu:latest",
         "interactive": true,
