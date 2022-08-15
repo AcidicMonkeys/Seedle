@@ -78,7 +78,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
         "hostname": "python",
-        "image": "alpine:latest",
+        "image": "python:alpine",
         "interactive": true,
         "command": "/bin/bash"
       },
