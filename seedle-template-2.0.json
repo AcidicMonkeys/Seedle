@@ -25,7 +25,7 @@
       {
         "type": 1,
         "title": "NodeJS (Ubuntu)",
-        "name": "NodeJS (Ubuntu)",
+        "name": "NodeJS_Ubuntu",
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
           "runtime environment"
@@ -40,7 +40,7 @@
       {
         "type": 1,
         "title": "NodeJS (Alpine)",
-        "name": "NodeJS (Alpine)",
+        "name": "NodeJS_Alpine",
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
           "runtime environment"
@@ -55,7 +55,7 @@
       {
         "type": 1,
         "title": "Python (Ubuntu)",
-        "name": "Python (Ubuntu)",
+        "name": "Python_Ubuntu",
         "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "categories": [
           "runtime environment"
@@ -70,7 +70,7 @@
       {
         "type": 1,
         "title": "Python (Alpine)",
-        "name": "Python (Alpine)",
+        "name": "Python_Alpine",
         "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "categories": [
           "runtime environment"
