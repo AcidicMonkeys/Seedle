@@ -344,7 +344,7 @@
         "volumes": [
           {
             "container": "/app/data",
-            "bind": "/home/Seedle/Docker/UptimeKuma",
+            "bind": "/var/lib/Seedle/UptimeKuma",
             "readonly": false
           }
         ]
