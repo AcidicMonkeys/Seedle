@@ -1075,6 +1075,27 @@
       },
       {
         "type": 1,
+        "title": "Solr",
+        "name": "Solr",
+        "description": "Solr is an open-source enterprise-search platform, written in Java. Its major features include full-text search, hit highlighting, faceted search, real-time indexing, dynamic clustering, database integration, NoSQL features and rich document handling.",
+        "categories": [
+          "Search Engine"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/seach-engine/solr.png",
+        "hostname": "solr",
+        "image": "solr:latest",
+        "ports": [
+          "8983/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/opt/solr/mydata"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Nginx",
         "name": "Nginx",
         "description": "Nginx, stylized as NGINX, is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004. Nginx is free and open-source software, released under the terms of the 2-clause BSD license.",
@@ -1203,25 +1224,6 @@
           },
           {
             "container": "/usr/src/app/localMetadata"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Solr",
-        "description": "Open-source enterprise search platform",
-        "categories": [
-          "search-engine"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
-        "image": "solr:latest",
-        "ports": [
-          "8983/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/opt/solr/mydata"
           }
         ]
       },
