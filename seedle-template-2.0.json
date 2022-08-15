@@ -103,13 +103,14 @@
       {
         "type": 1,
         "title": "Plone",
-        "description": "A free and open-source CMS built on top of Zope",
-        "note": "Default user and password are admin/admin",
+        "name": "Plone",
+        "description": "Plone is a free and open source content management system built on top of the Zope application server. Plone is positioned as an enterprise CMS and is commonly used for intranets and as part of the web presence of large organizations.",
         "categories": [
           "CMS"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plone.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/cms/plone.png",
+        "hostname": "plone",
         "image": "plone:latest",
         "ports": [
           "8080/tcp"
