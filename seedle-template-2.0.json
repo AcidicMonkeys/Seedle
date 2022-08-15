@@ -904,12 +904,14 @@
       {
         "type": 1,
         "title": "Elasticsearch",
-        "description": "Open-source search and analytics engine",
+        "name": "Elasticsearch",
+        "description": "Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.",
         "categories": [
-          "Database"
+          "Search Engine"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/serach-engine/elasticsearch.png",
+        "hostname": "elasticsearch",
         "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
         "ports": [
           "9200/tcp",
