@@ -24,23 +24,8 @@
       },
       {
         "type": 1,
-        "title": "Ubuntu",
-        "name": "Ubuntu",
-        "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
-        "categories": [
-          "os"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
-        "hostname": "ubuntu",
-        "image": "ubuntu:latest",
-        "interactive": true,
-        "command": "/bin/bash"
-      },
-      {
-        "type": 1,
-        "title": "NodeJS",
-        "name": "NodeJS",
+        "title": "NodeJS (Ubuntu)",
+        "name": "NodeJS (Ubuntu)",
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
           "runtime environment"
@@ -54,8 +39,23 @@
       },
       {
         "type": 1,
-        "title": "Python",
-        "name": "Python",
+        "title": "NodeJS (Alpine)",
+        "name": "NodeJS (Alpine)",
+        "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
+        "categories": [
+          "runtime environment"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
+        "hostname": "nodejs",
+        "image": "current-alpine:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "Python (Ubuntu)",
+        "name": "Python (Ubuntu)",
         "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "categories": [
           "runtime environment"
@@ -64,6 +64,36 @@
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
         "hostname": "python",
         "image": "python:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "Python (Alpine)",
+        "name": "Python (Alpine)",
+        "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
+        "categories": [
+          "runtime environment"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
+        "hostname": "python",
+        "image": "alpine:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "Ubuntu",
+        "name": "Ubuntu",
+        "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
+        "categories": [
+          "os"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
+        "hostname": "ubuntu",
+        "image": "ubuntu:latest",
         "interactive": true,
         "command": "/bin/bash"
       },
