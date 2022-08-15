@@ -450,8 +450,8 @@
       },
       {
         "type": 1,
-        "title": "SQL Server Express",
-        "name": "SQL-Server-Express",
+        "title": "SQL Server Express (Windows)",
+        "name": "SQL-Server-Express-Windows",
         "description": "SQL Server Express is a free edition of SQL Server, ideal for development and production for desktop, web and small server applications.",
         "categories": [
           "Database"
@@ -459,7 +459,7 @@
         "platform": "windows",
         "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
-        "hostname": "sql-server-express",
+        "hostname": "sql-server-express-windows",
         "image": "microsoft/mssql-server-windows-express:latest",
         "ports": [
           "1433/tcp"
@@ -1172,12 +1172,14 @@
       {
         "type": 1,
         "title": "Minio",
-        "description": "A distributed object storage server built for cloud applications and devops",
+        "name": "Minio",
+        "description": "MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service. It can handle unstructured data such as photos, videos, log files, backups, and container images with the maximum supported object size of 5TB.",
         "categories": [
-          "storage"
+          "Storage"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/minio-3.png",
+        "hostname": "minio-s3",
         "image": "quay.io/minio/minio:latest",
         "ports": [
           "9000/tcp",
@@ -1206,12 +1208,14 @@
       {
         "type": 1,
         "title": "Scality S3",
-        "description": "Standalone AWS S3 protocol server",
+        "name": "Scality-S3",
+        "description": "What is S3 Scality? S3 Compatible Storage is a storage solution that allows access to and management of the data it stores over an S3 compliant interface.",
         "categories": [
-          "storage"
+          "Storage"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/scality-s3.png",
+        "hostname": "scality-s3",
         "image": "scality/s3server",
         "ports": [
           "8000/tcp"
@@ -1312,7 +1316,7 @@
         "note": "Default credentials: admin/admin",
         "categories": [
           "filesystem",
-          "storage"
+          "Storage"
         ],
         "platform": "linux",
         "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
