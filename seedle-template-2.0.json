@@ -11,7 +11,6 @@
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/registry.png",
-        "hostname": "registry",
         "image": "registry:latest",
         "ports": [
           "5000/tcp"
@@ -32,7 +31,6 @@
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
-        "hostname": "nodejs",
         "image": "node:latest",
         "interactive": true,
         "command": "/bin/bash"
@@ -47,7 +45,6 @@
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
-        "hostname": "nodejs",
         "image": "node:current-alpine3.15",
         "interactive": true,
         "command": "/bin/bash"
@@ -62,7 +59,6 @@
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
-        "hostname": "python",
         "image": "python:latest",
         "interactive": true,
         "command": "/bin/bash"
@@ -77,7 +73,6 @@
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
-        "hostname": "python",
         "image": "python:alpine",
         "interactive": true,
         "command": "/bin/bash"
@@ -92,7 +87,6 @@
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
-        "hostname": "ubuntu",
         "image": "ubuntu:latest",
         "interactive": true,
         "command": "/bin/bash"
