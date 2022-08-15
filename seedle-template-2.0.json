@@ -264,67 +264,6 @@
       },
       {
         "type": 1,
-        "title": "Nginx",
-        "description": "High performance web server",
-        "categories": [
-          "webserver"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
-        "image": "nginx:latest",
-        "ports": [
-          "80/tcp",
-          "443/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/etc/nginx"
-          },
-          {
-            "container": "/usr/share/nginx/html"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Httpd",
-        "description": "Open-source HTTP server",
-        "categories": [
-          "webserver"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/httpd.png",
-        "image": "httpd:latest",
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/usr/local/apache2/htdocs/"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Caddy",
-        "description": "Open-source web server with automatic HTTPS written in Go",
-        "categories": [
-          "webserver"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-        "image": "caddy:latest",
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
-          }
-        ]
-      },
-      {
-        "type": 1,
         "title": "MySQL",
         "description": "The most popular open-source database",
         "categories": [
@@ -1389,6 +1328,67 @@
             "label": "HTTPS port",
             "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
             "default": "443"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Nginx",
+        "description": "High performance web server",
+        "categories": [
+          "WebServer"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+        "image": "nginx:latest",
+        "ports": [
+          "80/tcp",
+          "443/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/etc/nginx"
+          },
+          {
+            "container": "/usr/share/nginx/html"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Httpd",
+        "description": "Open-source HTTP server",
+        "categories": [
+          "WebServer"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/httpd.png",
+        "image": "httpd:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/usr/local/apache2/htdocs/"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Caddy",
+        "description": "Open-source web server with automatic HTTPS written in Go",
+        "categories": [
+          "WebServer"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
+        "image": "caddy:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
           }
         ]
       }
