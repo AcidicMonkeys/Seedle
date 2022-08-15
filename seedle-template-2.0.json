@@ -604,6 +604,38 @@
       },
       {
         "type": 1,
+        "title": "Mautic",
+        "name": "Mautic",
+        "description": "Mautic is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact segmentation, marketing campaigns, lead scoring, etc.",
+        "categories": [
+          "Marketing"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/marketing/mautic.png",
+        "hostname": "mautic",
+        "image": "mautic/mautic:latest",
+        "env": [
+          {
+            "name": "MAUTIC_DB_HOST",
+            "label": "MySQL database host",
+            "type": "container"
+          },
+          {
+            "name": "MAUTIC_DB_PASSWORD",
+            "label": "Database password"
+          }
+        ],
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/www/html"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Datadog Agent",
         "name": "Datadog-Agent",
         "description": "The Datadog Agent is software that runs on your hosts. It collects events and metrics from hosts and sends them to Datadog, where you can analyze your monitoring and performance data. The Datadog Agent is open source and its source code is available on GitHub.",
@@ -897,6 +929,27 @@
             "label": "Dokku host root",
             "default": "/var/lib/dokku/home/dokku",
             "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "RedMine",
+        "name": "RedMine",
+        "description": "RedMine is a free and open source, web-based project management and issue tracking tool. It allows users to manage multiple projects and associated subprojects. It features per project wikis and forums, time tracking, and flexible, role-based access control.",
+        "categories": [
+          "Project Management"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/project-management/redmine.png",
+        "hostname": "redmine",
+        "image": "redmine:latest",
+        "ports": [
+          "3000/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/usr/src/redmine/files"
           }
         ]
       },
@@ -1273,59 +1326,6 @@
         "volumes": [
           {
             "container": "/var/lib/rabbitmq"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Mautic",
-        "name": "Mautic",
-        "description": "Mautic is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact segmentation, marketing campaigns, lead scoring, etc.",
-        "categories": [
-          "Marketing"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/marketing/mautic.png",
-        "hostname": "mautic",
-        "image": "mautic/mautic:latest",
-        "env": [
-          {
-            "name": "MAUTIC_DB_HOST",
-            "label": "MySQL database host",
-            "type": "container"
-          },
-          {
-            "name": "MAUTIC_DB_PASSWORD",
-            "label": "Database password"
-          }
-        ],
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/www/html"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Redmine",
-        "name": "Redmine",
-        "description": "Redmine is a free and open source, web-based project management and issue tracking tool. It allows users to manage multiple projects and associated subprojects. It features per project wikis and forums, time tracking, and flexible, role-based access control.",
-        "categories": [
-          "Project Management"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/project-management/redmine.png",
-        "hostname": "redmine",
-        "image": "redmine:latest",
-        "ports": [
-          "3000/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/usr/src/redmine/files"
           }
         ]
       }
