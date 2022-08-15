@@ -215,7 +215,7 @@
       {
         "type": 1,
         "title": "Sematext Agent",
-        "name":"SematextAgent",
+        "name":"Sematext-Agent",
         "description": "Sematext Agent is a modern, container-native monitoring agent for Docker. It runs as a tiny container on every Docker host and provides automatic collection and processing of Docker Metrics and Events for all cluster nodes and all auto-discovered containers.",
         "categories": [
           "Monitoring"
@@ -245,7 +245,7 @@
       {
         "type": 2,
         "title": "Sematext Agent",
-        "name":"SematextAgent",
+        "name":"Sematext-Agent",
         "description": "Sematext Agent is a modern, container-native monitoring agent for Docker. It runs as a tiny container on every Docker host and provides automatic collection and processing of Docker Metrics and Events for all cluster nodes and all auto-discovered containers.",
         "categories": [
           "Monitoring"
@@ -265,6 +265,64 @@
           {
             "name": "SPM_TOKEN",
             "label": "SPM monitoring token"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Datadog Agent",
+        "name": "Datadog-Agent",
+        "description": "The Datadog Agent is software that runs on your hosts. It collects events and metrics from hosts and sends them to Datadog, where you can analyze your monitoring and performance data. The Datadog Agent is open source and its source code is available on GitHub.",
+        "categories": [
+          "Monitoring"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/monitoring/datadog_agent.png",
+        "hostname": "datadog-agent",
+        "image": "datadog/agent:latest",
+        "env": [
+          {
+            "name": "DD_API_KEY",
+            "label": "Datadog API key"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "/var/run/docker.sock",
+            "bind": "/var/run/docker.sock",
+            "readonly": true
+          },
+          {
+            "container": "/host/sys/fs/cgroup",
+            "bind": "/sys/fs/cgroup",
+            "readonly": true
+          },
+          {
+            "container": "/host/proc",
+            "bind": "/proc",
+            "readonly": true
+          }
+        ]
+      },
+      {
+        "type": 2,
+        "title": "Datadog Agent",
+        "name": "Datadog-Agent",
+        "description": "The Datadog Agent is software that runs on your hosts. It collects events and metrics from hosts and sends them to Datadog, where you can analyze your monitoring and performance data. The Datadog Agent is open source and its source code is available on GitHub.",
+        "categories": [
+          "Monitoring"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/monitoring/datadog_agent.png",
+        "hostname": "datadog-agent",
+        "repository": {
+          "url": "https://github.com/portainer/templates",
+          "stackfile": "stacks/datadog-agent/docker-stack.yml"
+        },
+        "env": [
+          {
+            "name": "API_KEY",
+            "label": "Datadog API key"
           }
         ]
       },
@@ -925,40 +983,6 @@
       },
       {
         "type": 1,
-        "title": "Datadog agent",
-        "description": "Collect events and metrics",
-        "categories": [
-          "Monitoring"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
-        "image": "datadog/agent:latest",
-        "env": [
-          {
-            "name": "DD_API_KEY",
-            "label": "Datadog API key"
-          }
-        ],
-        "volumes": [
-          {
-            "container": "/var/run/docker.sock",
-            "bind": "/var/run/docker.sock",
-            "readonly": true
-          },
-          {
-            "container": "/host/sys/fs/cgroup",
-            "bind": "/sys/fs/cgroup",
-            "readonly": true
-          },
-          {
-            "container": "/host/proc",
-            "bind": "/proc",
-            "readonly": true
-          }
-        ]
-      },
-      {
-        "type": 1,
         "title": "Mautic",
         "description": "Open-source marketing automation platform",
         "categories": [
@@ -1197,26 +1221,6 @@
             "name": "AZURE_PRIMARY_KEY",
             "label": "Primary key",
             "description": "Azure primary key"
-          }
-        ]
-      },
-      {
-        "title": "Datadog agent",
-        "type": 2,
-        "categories": [
-          "Monitoring"
-        ],
-        "description": "Collect events and metrics",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
-        "platform": "linux",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/datadog-agent/docker-stack.yml"
-        },
-        "env": [
-          {
-            "name": "API_KEY",
-            "label": "Datadog API key"
           }
         ]
       },
