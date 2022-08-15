@@ -185,6 +185,11 @@
         ]
       },
       {
+        "type": 4,
+        "title": "WordPress",
+        "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/wordpress/edge/docker-stack.yml"
+      },
+      {
         "type": 3,
         "title": "OpenAMT",
         "name": "OpenAMT",
@@ -500,21 +505,6 @@
             "label": "Redis password"
           }
         ]
-      },
-      {
-        "type": 2,
-        "title": "CockroachDB",
-        "description": "CockroachDB cluster",
-        "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/cockroachdb/docker-stack.yml"
-        }
       },
       {
         "type": 1,
@@ -1289,12 +1279,14 @@
       {
         "type": 1,
         "title": "Mautic",
-        "description": "Open-source marketing automation platform",
+        "name": "Mautic",
+        "description": "Mautic is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact segmentation, marketing campaigns, lead scoring, etc.",
         "categories": [
-          "marketing"
+          "Marketing"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/marketing/mautic.png",
+        "hostname": "mautic",
         "image": "mautic/mautic:latest",
         "env": [
           {
@@ -1350,98 +1342,6 @@
           "url": "https://github.com/portainer/templates",
           "stackfile": "stacks/portainer-agent/docker-stack.yml"
         }
-      },
-      {
-        "type": 2,
-        "title": "OpenFaaS",
-        "name": "func",
-        "description": "Serverless functions made simple",
-        "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080. <b>Warning</b>: the name of the stack must be 'func'.",
-        "categories": [
-          "serverless"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/openfaas.png",
-        "repository": {
-          "url": "https://github.com/openfaas/faas",
-          "stackfile": "docker-compose.yml"
-        }
-      },
-      {
-        "type": 2,
-        "title": "IronFunctions",
-        "description": "Open-source serverless computing platform",
-        "note": "Deploys the IronFunctions API and UI.",
-        "categories": [
-          "serverless"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/ironfunctions/docker-stack.yml"
-        }
-      },
-      {
-        "type": 2,
-        "title": "Microsoft OMS Agent",
-        "description": "Microsoft Operations Management Suite Linux agent.",
-        "categories": [
-          "OPS"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/microsoft-oms/docker-stack.yml"
-        },
-        "env": [
-          {
-            "name": "AZURE_WORKSPACE_ID",
-            "label": "Workspace ID",
-            "description": "Azure Workspace ID"
-          },
-          {
-            "name": "AZURE_PRIMARY_KEY",
-            "label": "Primary key",
-            "description": "Azure primary key"
-          }
-        ]
-      },
-      {
-        "type": 4,
-        "title": "Wordpress",
-        "description": "Wordpress setup with a MySQL database",
-        "note": "Deploys a Wordpress instance connected to a MySQL database.",
-        "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/wordpress/edge/docker-stack.yml"
-      },
-      {
-        "type": 4,
-        "title": "CockroachDB",
-        "description": "CockroachDB cluster",
-        "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-        "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
-      },
-      {
-        "type": 3,
-        "title": "FDO",
-        "description": "FDO",
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/fdo/docker-stack.yml"
-        },
-        "env": [
-          {
-            "name": "owner_api_user",
-            "label": "API Username"
-          },
-          {
-            "name": "owner_api_password",
-            "label": "API Password"
-          }
-        ]
       }
     ]
   }
