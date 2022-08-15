@@ -114,18 +114,18 @@
       },
       {
         "type": 1,
-        "title": "Ubuntu",
-        "name": "Ubuntu",
-        "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
+        "title": "ArchLinux",
+        "name": "ArchLinux",
+        "description": "Arch Linux is an independently developed, x86-64 general-purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required.",
         "categories": [
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
-        "hostname": "ubuntu",
-        "image": "ubuntu:latest",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/archlinux.png",
+        "hostname": "archlinux",
+        "image": "archlinux:latest",
         "interactive": true,
-        "command": "/bin/bash"
+        "command": "/bin/sh"
       },
       {
         "type": 1,
@@ -138,6 +138,21 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/debian.png",
         "hostname": "debian",
+        "image": "ubuntu:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "Ubuntu",
+        "name": "Ubuntu",
+        "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
+        "categories": [
+          "os"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/ubuntu.png",
+        "hostname": "ubuntu",
         "image": "ubuntu:latest",
         "interactive": true,
         "command": "/bin/bash"
