@@ -235,6 +235,214 @@
       },
       {
         "type": 1,
+        "title": "MariaDB",
+        "name": "MariaDB",
+        "description": "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, intended to remain free and open-source software under the GNU General Public License.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mariadb.png",
+        "hostname": "mariadb",
+        "image": "mariadb:latest",
+        "env": [
+          {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "label": "Root password"
+          }
+        ],
+        "ports": [
+          "3306/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/mysql"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "MongoDB (NoSQL)",
+        "name": "MongoDB",
+        "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mongodb.png",
+        "hostname": "mongodb",
+        "image": "mongo:latest",
+        "ports": [
+          "27017/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data/db"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "MySQL",
+        "name": "MySQL",
+        "description": "MySQL is an open-source relational database management system. Its name is a combination of My, the name of co-founder Michael Widenius's daughter My, and SQL, the abbreviation for Structured Query Language.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mysql.png",
+        "hostname": "mysql",
+        "image": "mysql/mysql-server:5.7",
+        "env": [
+          {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "label": "Root password"
+          },
+          {
+            "name": "MYSQL_ROOT_HOST",
+            "default": "%",
+            "preset": true
+          }
+        ],
+        "ports": [
+          "3306/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/mysql"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "PostgreSQL",
+        "name": "PostgreSQL",
+        "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/postgresql.png",
+        "hostname": "postgresql",
+        "image": "postgres:latest",
+        "env": [
+          {
+            "name": "POSTGRES_USER",
+            "label": "Superuser"
+          },
+          {
+            "name": "POSTGRES_PASSWORD",
+            "label": "Superuser password"
+          }
+        ],
+        "ports": [
+          "5432/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/postgresql/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "CrateDB",
+        "name": "CrateDB",
+        "description": "CrateDB is a distributed SQL database management system that integrates a fully searchable document-oriented data store. It is open-source, written in Java, based on a shared-nothing architecture, and designed for high scalability. CrateDB includes components from Trino, Lucene, Elasticsearch and Netty.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/cratedb.png",
+        "hostname": "cratedb",
+        "image": "crate:latest",
+        "ports": [
+          "4200/tcp",
+          "4300/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "CommandBox",
+        "name": "CommandBox",
+        "description": "CommandBox is a Command Line Interface (CLI), package manager, embedded CFML server, application scaffolding and much more.",
+        "categories": [
+          "Development"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/development/commandbox.png",
+        "hostname": "commandbox",
+        "image": "ortussolutions/commandbox:latest",
+        "env": [
+          {
+            "name": "CFENGINE",
+            "default": "lucee@4.5",
+            "preset": true
+          }
+        ],
+        "ports": [
+          "8080/tcp",
+          "8443/tcp"
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Jenkins",
+        "name": "Jenkins",
+        "description": "Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat.",
+        "categories": [
+          "Development"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/development/jenkins.png",
+        "hostname": "jenkins",
+        "image": "jenkins/jenkins:lts-jdk11",
+        "ports": [
+          "8080/tcp",
+          "50000/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/jenkins_home"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "GitLab CE",
+        "name": "GitLab CE",
+        "description": "GitLab can be installed in most GNU/Linux distributions, and with several cloud providers. To get the best experience from GitLab, you must balance performance, reliability, ease of administration (backups, upgrades, and troubleshooting), and the cost of hosting.",
+        "categories": [
+          "Development"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/development/gitlab-ce.png",
+        "hostname": "gitlab-ce",
+        "image": "gitlab/gitlab-ce:latest",
+        "ports": [
+          "80/tcp",
+          "443/tcp",
+          "22/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/etc/gitlab"
+          },
+          {
+            "container": "/var/log/gitlab"
+          },
+          {
+            "container": "/var/opt/gitlab"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Registry",
         "name": "Registry",
         "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
@@ -703,6 +911,28 @@
       },
       {
         "type": 1,
+        "title": "Elasticsearch",
+        "name": "Elasticsearch",
+        "description": "Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.",
+        "categories": [
+          "Search Engine"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/serach-engine/elasticsearch.png",
+        "hostname": "elasticsearch",
+        "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
+        "ports": [
+          "9200/tcp",
+          "9300/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/usr/share/elasticsearch/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Nginx",
         "name": "Nginx",
         "description": "Nginx, stylized as NGINX, is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004. Nginx is free and open-source software, released under the terms of the 2-clause BSD license.",
@@ -765,231 +995,6 @@
         "volumes": [
           {
             "container": "/data"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "MariaDB",
-        "name": "MariaDB",
-        "description": "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, intended to remain free and open-source software under the GNU General Public License.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mariadb.png",
-        "hostname": "mariadb",
-        "image": "mariadb:latest",
-        "env": [
-          {
-            "name": "MYSQL_ROOT_PASSWORD",
-            "label": "Root password"
-          }
-        ],
-        "ports": [
-          "3306/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/lib/mysql"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "MongoDB (NoSQL)",
-        "name": "MongoDB",
-        "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mongodb.png",
-        "hostname": "mongodb",
-        "image": "mongo:latest",
-        "ports": [
-          "27017/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data/db"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "MySQL",
-        "name": "MySQL",
-        "description": "MySQL is an open-source relational database management system. Its name is a combination of My, the name of co-founder Michael Widenius's daughter My, and SQL, the abbreviation for Structured Query Language.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mysql.png",
-        "hostname": "mysql",
-        "image": "mysql/mysql-server:5.7",
-        "env": [
-          {
-            "name": "MYSQL_ROOT_PASSWORD",
-            "label": "Root password"
-          },
-          {
-            "name": "MYSQL_ROOT_HOST",
-            "default": "%",
-            "preset": true
-          }
-        ],
-        "ports": [
-          "3306/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/lib/mysql"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "PostgreSQL",
-        "name": "PostgreSQL",
-        "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/postgresql.png",
-        "hostname": "postgresql",
-        "image": "postgres:latest",
-        "env": [
-          {
-            "name": "POSTGRES_USER",
-            "label": "Superuser"
-          },
-          {
-            "name": "POSTGRES_PASSWORD",
-            "label": "Superuser password"
-          }
-        ],
-        "ports": [
-          "5432/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/lib/postgresql/data"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "CrateDB",
-        "name": "CrateDB",
-        "description": "CrateDB is a distributed SQL database management system that integrates a fully searchable document-oriented data store. It is open-source, written in Java, based on a shared-nothing architecture, and designed for high scalability. CrateDB includes components from Trino, Lucene, Elasticsearch and Netty.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/createdb.png",
-        "hostname": "cratedb",
-        "image": "crate:latest",
-        "ports": [
-          "4200/tcp",
-          "4300/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Elasticsearch",
-        "name": "Elasticsearch",
-        "description": "Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.",
-        "categories": [
-          "Search Engine"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/serach-engine/elasticsearch.png",
-        "hostname": "elasticsearch",
-        "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
-        "ports": [
-          "9200/tcp",
-          "9300/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/usr/share/elasticsearch/data"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "CommandBox",
-        "description": "ColdFusion (CFML) CLI",
-        "categories": [
-          "Development"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
-        "image": "ortussolutions/commandbox:latest",
-        "env": [
-          {
-            "name": "CFENGINE",
-            "default": "lucee@4.5",
-            "preset": true
-          }
-        ],
-        "ports": [
-          "8080/tcp",
-          "8443/tcp"
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Jenkins",
-        "description": "Open-source continuous integration tool",
-        "categories": [
-          "Development"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
-        "image": "jenkins/jenkins:lts-jdk11",
-        "ports": [
-          "8080/tcp",
-          "50000/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/jenkins_home"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Gitlab CE",
-        "description": "Open-source end-to-end software development platform",
-        "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
-        "categories": [
-          "Development"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
-        "image": "gitlab/gitlab-ce:latest",
-        "ports": [
-          "80/tcp",
-          "443/tcp",
-          "22/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/etc/gitlab"
-          },
-          {
-            "container": "/var/log/gitlab"
-          },
-          {
-            "container": "/var/opt/gitlab"
           }
         ]
       },
