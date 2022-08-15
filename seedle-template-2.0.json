@@ -770,6 +770,54 @@
       },
       {
         "type": 1,
+        "title": "MariaDB",
+        "name": "MariaDB",
+        "description": "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, intended to remain free and open-source software under the GNU General Public License.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mariadb.png",
+        "hostname": "mariadb",
+        "image": "mariadb:latest",
+        "env": [
+          {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "label": "Root password"
+          }
+        ],
+        "ports": [
+          "3306/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/mysql"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "MongoDB (NoSQL)",
+        "name": "MongoDB",
+        "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mongodb.png",
+        "hostname": "mongodb",
+        "image": "mongo:latest",
+        "ports": [
+          "27017/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data/db"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "MySQL",
         "name": "MySQL",
         "description": "MySQL is an open-source relational database management system. Its name is a combination of My, the name of co-founder Michael Widenius's daughter My, and SQL, the abbreviation for Structured Query Language.",
@@ -802,40 +850,15 @@
       },
       {
         "type": 1,
-        "title": "MariaDB",
-        "name": "MariaDB",
-        "description": "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, intended to remain free and open-source software under the GNU General Public License.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mariadb.png",
-        "hostname": "mariadb",
-        "image": "mariadb:latest",
-        "env": [
-          {
-            "name": "MYSQL_ROOT_PASSWORD",
-            "label": "Root password"
-          }
-        ],
-        "ports": [
-          "3306/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/lib/mysql"
-          }
-        ]
-      },
-      {
-        "type": 1,
         "title": "PostgreSQL",
-        "description": "The most advanced open-source database",
+        "name": "PostgreSQL",
+        "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.",
         "categories": [
           "Database"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/postgresql.png",
+        "hostname": "postgresql",
         "image": "postgres:latest",
         "env": [
           {
@@ -858,32 +881,15 @@
       },
       {
         "type": 1,
-        "title": "Mongo",
-        "description": "Open-source document-oriented database",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
-        "image": "mongo:latest",
-        "ports": [
-          "27017/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data/db"
-          }
-        ]
-      },
-      {
-        "type": 1,
         "title": "CrateDB",
-        "description": "An open-source distributed SQL database",
+        "name": "CrateDB",
+        "description": "CrateDB is a distributed SQL database management system that integrates a fully searchable document-oriented data store. It is open-source, written in Java, based on a shared-nothing architecture, and designed for high scalability. CrateDB includes components from Trino, Lucene, Elasticsearch and Netty.",
         "categories": [
           "Database"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/createdb.webp",
+        "hostname": "cratedb",
         "image": "crate:latest",
         "ports": [
           "4200/tcp",
