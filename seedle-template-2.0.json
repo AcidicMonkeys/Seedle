@@ -749,6 +749,27 @@
       },
       {
         "type": 1,
+        "title": "Ghost",
+        "name": "Ghost",
+        "description": "Ghost is a free and open source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications.",
+        "categories": [
+          "Blogging"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/blogging/ghost.png",
+        "hostname": "ghost",
+        "image": "ghost:latest",
+        "ports": [
+          "2368/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/ghost/content"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "MySQL",
         "description": "The most popular open-source database",
         "categories": [
@@ -1148,26 +1169,6 @@
         "volumes": [
           {
             "container": "/var/lib/rabbitmq"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Ghost",
-        "description": "Free and open-source blogging platform",
-        "categories": [
-          "blog"
-        ],
-        "note": "Access the blog management interface under <code>/ghost/</code>.",
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png",
-        "image": "ghost:latest",
-        "ports": [
-          "2368/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/lib/ghost/content"
           }
         ]
       },
