@@ -933,27 +933,6 @@
         ]
       },
       {
-        "type": 1,
-        "title": "RedMine",
-        "name": "RedMine",
-        "description": "RedMine is a free and open source, web-based project management and issue tracking tool. It allows users to manage multiple projects and associated subprojects. It features per project wikis and forums, time tracking, and flexible, role-based access control.",
-        "categories": [
-          "Project Management"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/project-management/redmine.png",
-        "hostname": "redmine",
-        "image": "redmine:latest",
-        "ports": [
-          "3000/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/usr/src/redmine/files"
-          }
-        ]
-      },
-      {
         "type": 3,
         "title": "Dokku",
         "name": "Dokku",
@@ -1009,6 +988,27 @@
             "label": "HTTPS port",
             "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
             "default": "443"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "RedMine",
+        "name": "RedMine",
+        "description": "RedMine is a free and open source, web-based project management and issue tracking tool. It allows users to manage multiple projects and associated subprojects. It features per project wikis and forums, time tracking, and flexible, role-based access control.",
+        "categories": [
+          "Project Management"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/project-management/redmine.png",
+        "hostname": "redmine",
+        "image": "redmine:latest",
+        "ports": [
+          "3000/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/usr/src/redmine/files"
           }
         ]
       },
