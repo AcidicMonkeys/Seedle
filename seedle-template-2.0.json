@@ -368,6 +368,148 @@
       },
       {
         "type": 1,
+        "title": "SQL Server",
+        "description": "Microsoft SQL Server on Linux",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "image": "mcr.microsoft.com/mssql/server:2019-latest",
+        "ports": [
+          "1433/tcp"
+        ],
+        "env": [
+          {
+            "name": "ACCEPT_EULA",
+            "default": "Y",
+            "preset": true
+          },
+          {
+            "name": "SA_PASSWORD",
+            "label": "SA password"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "SQL Server",
+        "description": "Microsoft SQL Server Developer for Windows containers",
+        "categories": [
+          "Database"
+        ],
+        "platform": "windows",
+        "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "image": "microsoft/mssql-server-windows-developer:latest",
+        "ports": [
+          "1433/tcp"
+        ],
+        "env": [
+          {
+            "name": "ACCEPT_EULA",
+            "default": "Y",
+            "preset": true
+          },
+          {
+            "name": "sa_password",
+            "label": "SA password"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "C:/temp/"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "SQL Server Express",
+        "description": "Microsoft SQL Server Express for Windows containers",
+        "categories": [
+          "Database"
+        ],
+        "platform": "windows",
+        "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "image": "microsoft/mssql-server-windows-express:latest",
+        "ports": [
+          "1433/tcp"
+        ],
+        "env": [
+          {
+            "name": "ACCEPT_EULA",
+            "default": "Y",
+            "preset": true
+          },
+          {
+            "name": "sa_password",
+            "label": "SA password"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "C:/temp/"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Redis",
+        "description": "Open-source in-memory data structure store",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+        "image": "redis:latest",
+        "ports": [
+          "6379/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ]
+      },
+      {
+        "type": 2,
+        "title": "Redis Cluster",
+        "description": "Open-source in-memory data structure store - Cluster mode",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+        "repository": {
+          "url": "https://github.com/portainer/templates",
+          "stackfile": "stacks/redis-cluster/docker-stack.yaml"
+        },
+        "env": [
+          {
+            "name": "REDIS_PASSWD",
+            "label": "Redis password"
+          }
+        ]
+      },
+      {
+        "type": 2,
+        "title": "CockroachDB",
+        "description": "CockroachDB cluster",
+        "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
+        "repository": {
+          "url": "https://github.com/portainer/templates",
+          "stackfile": "stacks/cockroachdb/docker-stack.yml"
+        }
+      },
+      {
+        "type": 1,
         "title": "CommandBox",
         "name": "CommandBox",
         "description": "CommandBox is a Command Line Interface (CLI), package manager, embedded CFML server, application scaffolding and much more.",
@@ -1066,94 +1208,6 @@
       },
       {
         "type": 1,
-        "title": "SQL Server",
-        "description": "Microsoft SQL Server on Linux",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-        "image": "mcr.microsoft.com/mssql/server:2019-latest",
-        "ports": [
-          "1433/tcp"
-        ],
-        "env": [
-          {
-            "name": "ACCEPT_EULA",
-            "default": "Y",
-            "preset": true
-          },
-          {
-            "name": "SA_PASSWORD",
-            "label": "SA password"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "SQL Server",
-        "description": "Microsoft SQL Server Developer for Windows containers",
-        "categories": [
-          "Database"
-        ],
-        "platform": "windows",
-        "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-        "image": "microsoft/mssql-server-windows-developer:latest",
-        "ports": [
-          "1433/tcp"
-        ],
-        "env": [
-          {
-            "name": "ACCEPT_EULA",
-            "default": "Y",
-            "preset": true
-          },
-          {
-            "name": "sa_password",
-            "label": "SA password"
-          }
-        ],
-        "volumes": [
-          {
-            "container": "C:/temp/"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "SQL Server Express",
-        "description": "Microsoft SQL Server Express for Windows containers",
-        "categories": [
-          "Database"
-        ],
-        "platform": "windows",
-        "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-        "image": "microsoft/mssql-server-windows-express:latest",
-        "ports": [
-          "1433/tcp"
-        ],
-        "env": [
-          {
-            "name": "ACCEPT_EULA",
-            "default": "Y",
-            "preset": true
-          },
-          {
-            "name": "sa_password",
-            "label": "SA password"
-          }
-        ],
-        "volumes": [
-          {
-            "container": "C:/temp/"
-          }
-        ]
-      },
-      {
-        "type": 1,
         "title": "Solr",
         "description": "Open-source enterprise search platform",
         "categories": [
@@ -1168,45 +1222,6 @@
         "volumes": [
           {
             "container": "/opt/solr/mydata"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Redis",
-        "description": "Open-source in-memory data structure store",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
-        "image": "redis:latest",
-        "ports": [
-          "6379/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
-          }
-        ]
-      },
-      {
-        "type": 2,
-        "title": "Redis Cluster",
-        "description": "Open-source in-memory data structure store - Cluster mode",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/redis-cluster/docker-stack.yaml"
-        },
-        "env": [
-          {
-            "name": "REDIS_PASSWD",
-            "label": "Redis password"
           }
         ]
       },
@@ -1349,21 +1364,6 @@
         "repository": {
           "url": "https://github.com/portainer/templates",
           "stackfile": "stacks/ironfunctions/docker-stack.yml"
-        }
-      },
-      {
-        "type": 2,
-        "title": "CockroachDB",
-        "description": "CockroachDB cluster",
-        "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/cockroachdb/docker-stack.yml"
         }
       },
       {
