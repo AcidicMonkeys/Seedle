@@ -214,6 +214,27 @@
       },
       {
         "type": 1,
+        "title": "Registry",
+        "name": "Registry",
+        "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
+        "categories": [
+          "Docker"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/registry.png",
+        "hostname": "registry",
+        "image": "registry:latest",
+        "ports": [
+          "5000/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/var/lib/registry"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Datadog Agent",
         "name": "Datadog-Agent",
         "description": "The Datadog Agent is software that runs on your hosts. It collects events and metrics from hosts and sends them to Datadog, where you can analyze your monitoring and performance data. The Datadog Agent is open source and its source code is available on GitHub.",
@@ -339,34 +360,13 @@
         "hostname": "uptimekuma",
         "image": "louislam/uptime-kuma:1",
         "ports": [
-          "3001/tcp"
+          "3001:3001/tcp"
         ],
         "volumes": [
           {
             "container": "/app/data",
             "bind": "/var/lib/Seedle/UptimeKuma",
             "readonly": false
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Registry",
-        "name": "Registry",
-        "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
-        "categories": [
-          "Docker"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/registry.png",
-        "hostname": "registry",
-        "image": "registry:latest",
-        "ports": [
-          "5000/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/var/lib/registry"
           }
         ]
       },
@@ -489,6 +489,106 @@
         "image": "ubuntu:latest",
         "interactive": true,
         "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "Dokku",
+        "name": "Dokku",
+        "description": "Own your PaaS using tools you already know. Powered by Docker, you can install Dokku on any hardware. Use it on inexpensive cloud providers. Use the extra cash to buy a pony or feed kittens. You'll save tens of dollars a year on your dog photo sharing website.",
+        "categories": [
+          "PaaS"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/paas/dokku.png",
+        "hostname": "dokku",
+        "image": "dokku/dokku",
+        "ports": [
+          "22/tcp",
+          "80/tcp",
+          "443/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/mnt/dokku",
+            "bind": "/var/lib/dokku"
+          },
+          {
+            "container": "/var/run/docker.sock",
+            "bind": "/var/run/docker.sock"
+          }
+        ],
+        "env": [
+          {
+            "name": "DOKKU_HOSTNAME",
+            "label": "Dokku hostname",
+            "description": "Global hostname to be registered by Dokku"
+          },
+          {
+            "name": "DOKKU_HOST_ROOT",
+            "label": "Dokku host root",
+            "default": "/var/lib/dokku/home/dokku",
+            "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
+          }
+        ]
+      },
+      {
+        "type": 3,
+        "title": "Dokku",
+        "name": "Dokku",
+        "description": "Own your PaaS using tools you already know. Powered by Docker, you can install Dokku on any hardware. Use it on inexpensive cloud providers. Use the extra cash to buy a pony or feed kittens. You'll save tens of dollars a year on your dog photo sharing website.",
+        "categories": [
+          "PaaS"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/paas/dokku.png",
+        "hostname": "dokku",
+        "repository": {
+          "url": "https://github.com/portainer/templates",
+          "stackfile": "stacks/dokku/docker-compose.yml"
+        },
+        "env": [
+          {
+            "name": "VERSION",
+            "label": "Dokku version",
+            "description": "Version of Dokku to use ('latest' if empty)",
+            "default": "latest"
+          },
+          {
+            "name": "DOKKU_HOSTNAME",
+            "label": "Dokku hostname",
+            "description": "Global hostname to be registered by Dokku"
+          },
+          {
+            "name": "VOLUME_PATH",
+            "label": "Dokku volume path",
+            "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
+            "default": "/var/lib/dokku"
+          },
+          {
+            "name": "DOKKU_HOST_ROOT",
+            "label": "Dokku host root",
+            "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
+            "default": "/var/lib/dokku/home/dokku"
+          },
+          {
+            "name": "SSH_PORT",
+            "label": "SSH port",
+            "description": "Host port to expose SSH port of Dokku (22 if empty)",
+            "default": "22"
+          },
+          {
+            "name": "HTTP_PORT",
+            "label": "HTTP port",
+            "description": "Host port to expose HTTP port of Dokku (80 if empty)",
+            "default": "80"
+          },
+          {
+            "name": "HTTPS_PORT",
+            "label": "HTTPS port",
+            "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
+            "default": "443"
+          }
+        ]
       },
       {
         "type": 1,
@@ -1122,45 +1222,6 @@
         ]
       },
       {
-        "type": 1,
-        "title": "Dokku",
-        "description": "Dokku setup as a container",
-        "categories": [
-          "PaaS"
-        ],
-        "platform": "linux",
-        "logo": "",
-        "image": "dokku/dokku",
-        "ports": [
-          "22/tcp",
-          "80/tcp",
-          "443/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/mnt/dokku",
-            "bind": "/var/lib/dokku"
-          },
-          {
-            "container": "/var/run/docker.sock",
-            "bind": "/var/run/docker.sock"
-          }
-        ],
-        "env": [
-          {
-            "name": "DOKKU_HOSTNAME",
-            "label": "Dokku hostname",
-            "description": "Global hostname to be registered by Dokku"
-          },
-          {
-            "name": "DOKKU_HOST_ROOT",
-            "label": "Dokku host root",
-            "default": "/var/lib/dokku/home/dokku",
-            "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
-          }
-        ]
-      },
-      {
         "type": 2,
         "title": "Portainer Agent",
         "description": "Manage all the resources in your Swarm cluster",
@@ -1279,63 +1340,6 @@
           {
             "name": "owner_api_password",
             "label": "API Password"
-          }
-        ]
-      },
-      {
-        "type": 3,
-        "title": "Dokku",
-        "description": "Dokku setup as a compose file",
-        "categories": [
-          "PaaS"
-        ],
-        "platform": "linux",
-        "logo": "",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/dokku/docker-compose.yml"
-        },
-        "env": [
-          {
-            "name": "VERSION",
-            "label": "Dokku version",
-            "description": "Version of Dokku to use ('latest' if empty)",
-            "default": "latest"
-          },
-          {
-            "name": "DOKKU_HOSTNAME",
-            "label": "Dokku hostname",
-            "description": "Global hostname to be registered by Dokku"
-          },
-          {
-            "name": "VOLUME_PATH",
-            "label": "Dokku volume path",
-            "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
-            "default": "/var/lib/dokku"
-          },
-          {
-            "name": "DOKKU_HOST_ROOT",
-            "label": "Dokku host root",
-            "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
-            "default": "/var/lib/dokku/home/dokku"
-          },
-          {
-            "name": "SSH_PORT",
-            "label": "SSH port",
-            "description": "Host port to expose SSH port of Dokku (22 if empty)",
-            "default": "22"
-          },
-          {
-            "name": "HTTP_PORT",
-            "label": "HTTP port",
-            "description": "Host port to expose HTTP port of Dokku (80 if empty)",
-            "default": "80"
-          },
-          {
-            "name": "HTTPS_PORT",
-            "label": "HTTPS port",
-            "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
-            "default": "443"
           }
         ]
       },
