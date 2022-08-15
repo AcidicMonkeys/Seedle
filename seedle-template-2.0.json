@@ -219,16 +219,16 @@
       },
       {
         "type": 1,
-        "title": "OracleLinux (Slim)",
-        "name": "OracleLinux-Slim",
-        "description": "Oracle Linux is a Linux distribution packaged and freely distributed by Oracle, available partially under the GNU General Public License since late 2006. It is compiled from Red Hat Enterprise Linux source code, replacing Red Hat branding with Oracle's.",
+        "title": "RockyLinux",
+        "name": "RockyLinux",
+        "description": "Rocky Linux is a Linux distribution developed by Rocky Enterprise Software Foundation. It is intended to be a downstream, complete binary-compatible release using the Red Hat Enterprise Linux operating system source code.",
         "categories": [
           "Operative System"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/oraclelinux.png",
-        "hostname": "oraclelinux-slim",
-        "image": "oraclelinux:9-slim",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/rockylinux.png",
+        "hostname": "rockylinux",
+        "image": "rockylinux:latest",
         "interactive": true,
         "command": "/bin/bash"
       },
