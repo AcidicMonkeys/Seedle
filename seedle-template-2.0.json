@@ -168,7 +168,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
         "hostname": "debian",
-        "image": "ubuntu:latest",
+        "image": "debian:latest",
         "interactive": true,
         "command": "/bin/bash"
       },
@@ -183,7 +183,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
         "hostname": "debian-stable",
-        "image": "ubuntu:stable",
+        "image": "debian:stable",
         "interactive": true,
         "command": "/bin/bash"
       },
@@ -198,7 +198,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
         "hostname": "debian-stable-slim",
-        "image": "ubuntu:stable-slim",
+        "image": "debian:stable-slim",
         "interactive": true,
         "command": "/bin/bash"
       },
