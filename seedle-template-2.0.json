@@ -3,6 +3,48 @@
     "templates": [
       {
         "type": 1,
+        "title": "ContentBox",
+        "name": "ContentBox",
+        "description": "ContentBox Modular CMS is an open-source content management system for CFML, created by Ortus Solutions, Corp. ContentBox has been designed as a modular HMVC software based on Hibernate ORM and the ColdBox Platform. ContentBox Modular CMS is dual-licensed as Apache v2 or a commercial license.",
+        "categories": [
+          "CMS"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/cms/contentbox.png",
+        "hsotname": "contentbox",
+        "image": "ortussolutions/contentbox:latest",
+        "env": [
+          {
+            "name": "express",
+            "default": "true",
+            "preset": true
+          },
+          {
+            "name": "install",
+            "default": "true",
+            "preset": true
+          },
+          {
+            "name": "CFENGINE",
+            "default": "lucee@4.5",
+            "preset": true
+          }
+        ],
+        "ports": [
+          "8080/tcp",
+          "8443/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data/contentbox/db"
+          },
+          {
+            "container": "/app/includes/shared/media"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Drupal",
         "name": "Drupal",
         "description": "Drupal is a free and open-source web content management system written in PHP and distributed under the GNU General Public License.",
@@ -985,46 +1027,6 @@
         "ports": [
           "8080/tcp",
           "8443/tcp"
-        ]
-      },
-      {
-        "type": 1,
-        "title": "ContentBox",
-        "description": "Open-source modular CMS",
-        "categories": [
-          "CMS"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-contentbox.png",
-        "image": "ortussolutions/contentbox:latest",
-        "env": [
-          {
-            "name": "express",
-            "default": "true",
-            "preset": true
-          },
-          {
-            "name": "install",
-            "default": "true",
-            "preset": true
-          },
-          {
-            "name": "CFENGINE",
-            "default": "lucee@4.5",
-            "preset": true
-          }
-        ],
-        "ports": [
-          "8080/tcp",
-          "8443/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data/contentbox/db"
-          },
-          {
-            "container": "/app/includes/shared/media"
-          }
         ]
       },
       {
