@@ -214,11 +214,67 @@
       },
       {
         "type": 1,
+        "title": "Sematext Agent",
+        "name":"SematextAgent",
+        "description": "Sematext Agent is a modern, container-native monitoring agent for Docker. It runs as a tiny container on every Docker host and provides automatic collection and processing of Docker Metrics and Events for all cluster nodes and all auto-discovered containers.",
+        "categories": [
+          "Monitoring"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/monitoring/sematext_agent.png",
+        "hostname": "sematext-agent",
+        "image": "sematext/sematext-agent-docker:latest",
+        "privileged": true,
+        "env": [
+          {
+            "name": "LOGSENE_TOKEN",
+            "label": "Logs token"
+          },
+          {
+            "name": "SPM_TOKEN",
+            "label": "SPM monitoring token"
+          }
+        ],
+        "volumes": [
+          {
+            "container": "/var/run/docker.sock",
+            "bind": "/var/run/docker.sock"
+          }
+        ]
+      },
+      {
+        "type": 2,
+        "title": "Sematext Agent",
+        "name":"SematextAgent",
+        "description": "Sematext Agent is a modern, container-native monitoring agent for Docker. It runs as a tiny container on every Docker host and provides automatic collection and processing of Docker Metrics and Events for all cluster nodes and all auto-discovered containers.",
+        "categories": [
+          "Monitoring"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/monitoring/sematext_agent.png",
+        "hostname": "sematext-agent",
+        "repository": {
+          "url": "https://github.com/portainer/templates",
+          "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
+        },
+        "env": [
+          {
+            "name": "LOGSENE_TOKEN",
+            "label": "Logs token"
+          },
+          {
+            "name": "SPM_TOKEN",
+            "label": "SPM monitoring token"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "Registry",
         "name": "Registry",
         "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
         "categories": [
-          "docker"
+          "Docker"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/registry.png",
@@ -869,36 +925,6 @@
       },
       {
         "type": 1,
-        "title": "Sematext Docker Agent",
-        "description": "Collect logs, metrics and docker events",
-        "categories": [
-          "Log Management",
-          "Monitoring"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
-        "image": "sematext/sematext-agent-docker:latest",
-        "name": "sematext-agent",
-        "privileged": true,
-        "env": [
-          {
-            "name": "LOGSENE_TOKEN",
-            "label": "Logs token"
-          },
-          {
-            "name": "SPM_TOKEN",
-            "label": "SPM monitoring token"
-          }
-        ],
-        "volumes": [
-          {
-            "container": "/var/run/docker.sock",
-            "bind": "/var/run/docker.sock"
-          }
-        ]
-      },
-      {
-        "type": 1,
         "title": "Datadog agent",
         "description": "Collect events and metrics",
         "categories": [
@@ -1171,31 +1197,6 @@
             "name": "AZURE_PRIMARY_KEY",
             "label": "Primary key",
             "description": "Azure primary key"
-          }
-        ]
-      },
-      {
-        "title": "Sematext Docker Agent",
-        "type": 2,
-        "categories": [
-          "Log Management",
-          "Monitoring"
-        ],
-        "description": "Collect logs, metrics and docker events",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
-        "platform": "linux",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
-        },
-        "env": [
-          {
-            "name": "LOGSENE_TOKEN",
-            "label": "Logs token"
-          },
-          {
-            "name": "SPM_TOKEN",
-            "label": "SPM monitoring token"
           }
         ]
       },
