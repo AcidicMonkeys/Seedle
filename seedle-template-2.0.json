@@ -1267,12 +1267,14 @@
       {
         "type": 1,
         "title": "RabbitMQ",
-        "description": "Highly reliable enterprise messaging system",
+        "name": "RabbitMQ",
+        "description": "RabbitMQ is an open-source message-broker software that originally implemented the Advanced Message Queuing Protocol and has since been extended with a plug-in architecture to support Streaming Text Oriented Messaging Protocol, MQ Telemetry Transport, and other protocols.",
         "categories": [
-          "messaging"
+          "Social"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/social/rabbitmq.png",
+        "hostname": "rabbitmq",
         "image": "rabbitmq:latest",
         "ports": [
           "5671/tcp",
