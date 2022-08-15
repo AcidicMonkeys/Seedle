@@ -888,7 +888,7 @@
           "Database"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/createdb.webp",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/createdb.png",
         "hostname": "cratedb",
         "image": "crate:latest",
         "ports": [
