@@ -1250,6 +1250,50 @@
       },
       {
         "type": 1,
+        "title": "NextCloud",
+        "name": "NextCloud",
+        "description": "Nextcloud is a suite of client-server software for creating and using file hosting services. It is enterprise-ready with comprehensive support options. Being free and open-source software, anyone is allowed to install and operate it on their own private server devices.",
+        "categories": [
+          "Storage"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/nextcloud.png",
+        "hostname": "nextcloud",
+        "image": "linuxserver/nextcloud:latest",
+        "env": [
+          {
+            "name": "PUID",
+            "label": "PUID",
+            "default": "1024"
+          },
+          {
+            "name": "PGID",
+            "label": "PGID",
+            "default": "100"
+          },
+          {
+            "name": "TZ",
+            "label": "TZ",
+            "default": "Europe/London"
+          }
+        ],
+        "ports": [
+          "443:443/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/config",
+            "bind": "/volume1/docker/nextcloud/config"
+          },
+          {
+            "container": "/data",
+            "bind": "/volume1/docker/nextcloud/data"
+          }
+        ],
+        "restart_policy": "unless-stopped"
+      },
+      {
+        "type": 1,
         "title": "Scality S3",
         "name": "Scality-S3",
         "description": "What is S3 Scality? S3 Compatible Storage is a storage solution that allows access to and management of the data it stores over an S3 compliant interface.",
