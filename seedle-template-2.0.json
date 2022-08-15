@@ -121,7 +121,7 @@
           "os"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/debian.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/alpine.png",
         "hostname": "alpine",
         "image": "alpine:latest",
         "interactive": true,
