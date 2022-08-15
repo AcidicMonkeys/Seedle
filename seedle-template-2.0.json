@@ -48,7 +48,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
         "hostname": "nodejs",
-        "image": "current-alpine:latest",
+        "image": "current-alpine",
         "interactive": true,
         "command": "/bin/bash"
       },
