@@ -714,7 +714,7 @@
           "WebServer"
         ],
         "platform": "linux",
-        "logo": "ttps://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/webserver/httpd.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/webserver/httpd.png",
         "hostname": "httpd",
         "image": "httpd:latest",
         "ports": [
@@ -729,12 +729,14 @@
       {
         "type": 1,
         "title": "Caddy",
-        "description": "Open-source web server with automatic HTTPS written in Go",
+        "name": "Caddy",
+        "description": "The Caddy web server is an extensible, cross-platform, open-source web server written in Go. The name Caddy refers both to a helper for tedious tasks, and a way to organize multiple parts into a simplified system.",
         "categories": [
           "WebServer"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/webserver/caddy.png",
+        "hostname": "caddy",
         "image": "caddy:latest",
         "ports": [
           "80/tcp"
