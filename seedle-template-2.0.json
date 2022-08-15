@@ -84,6 +84,36 @@
       },
       {
         "type": 1,
+        "title": "Alpine",
+        "name": "Alpine",
+        "description": "Alpine Linux is a Linux distribution designed to be small, simple and secure. Unlike most other Linux distributions, Alpine uses musl and BusyBox instead of the more commonly used Glibc and GNU Core Utilities and OpenRC for its init system instead of systemd.",
+        "categories": [
+          "os"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/alpine.png",
+        "hostname": "alpine",
+        "image": "alpine:latest",
+        "interactive": true,
+        "command": "/bin/ash"
+      },
+      {
+        "type": 1,
+        "title": "AmazonLinux",
+        "name": "AmazonLinux",
+        "description": "Amazon Linux provides a stable, secure, and high-performance execution environment for applications.",
+        "categories": [
+          "os"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/amazonlinux.png",
+        "hostname": "amazonlinux",
+        "image": "amazonlinux:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
         "title": "Ubuntu",
         "name": "Ubuntu",
         "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
@@ -111,21 +141,6 @@
         "image": "ubuntu:latest",
         "interactive": true,
         "command": "/bin/bash"
-      },
-      {
-        "type": 1,
-        "title": "Alpine",
-        "name": "Alpine",
-        "description": "Alpine Linux is a Linux distribution designed to be small, simple and secure. Unlike most other Linux distributions, Alpine uses musl and BusyBox instead of the more commonly used Glibc and GNU Core Utilities and OpenRC for its init system instead of systemd.",
-        "categories": [
-          "os"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/alpine.png",
-        "hostname": "alpine",
-        "image": "alpine:latest",
-        "interactive": true,
-        "command": "/bin/ash"
       },
       {
         "type": 1,
