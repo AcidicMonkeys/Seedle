@@ -50,7 +50,7 @@
         "hostname": "nodejs-alpine",
         "image": "node:18-alpine3.15",
         "interactive": true,
-        "command": "/bin/bash"
+        "command": "/bin/ash"
       },
       {
         "type": 1,
@@ -80,7 +80,7 @@
         "hostname": "python-alpine",
         "image": "python:alpine",
         "interactive": true,
-        "command": "/bin/bash"
+        "command": "/bin/ash"
       },
       {
         "type": 1,
