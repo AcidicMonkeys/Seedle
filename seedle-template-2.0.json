@@ -1178,7 +1178,7 @@
           "Storage"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/minio-3.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/minio-s3.png",
         "hostname": "minio-s3",
         "image": "quay.io/minio/minio:latest",
         "ports": [
@@ -1214,7 +1214,7 @@
           "Storage"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/scality-s3.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/scality.png",
         "hostname": "scality-s3",
         "image": "scality/s3server",
         "ports": [
