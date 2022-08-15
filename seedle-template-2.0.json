@@ -682,6 +682,71 @@
       },
       {
         "type": 1,
+        "title": "Nginx",
+        "name": "Nginx",
+        "description": "Nginx, stylized as NGINX, is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004. Nginx is free and open-source software, released under the terms of the 2-clause BSD license.",
+        "categories": [
+          "WebServer"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/webserver/nginx.png",
+        "hostname": "nginx",
+        "image": "nginx:latest",
+        "ports": [
+          "80/tcp",
+          "443/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/etc/nginx"
+          },
+          {
+            "container": "/usr/share/nginx/html"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Httpd",
+        "name": "Httpd",
+        "description": "The Apache HTTP Server is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0. Apache is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation.",
+        "categories": [
+          "WebServer"
+        ],
+        "platform": "linux",
+        "logo": "ttps://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/webserver/httpd.png",
+        "hostname": "httpd",
+        "image": "httpd:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/usr/local/apache2/htdocs/"
+          }
+        ]
+      },
+      {
+        "type": 1,
+        "title": "Caddy",
+        "description": "Open-source web server with automatic HTTPS written in Go",
+        "categories": [
+          "WebServer"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
+        "image": "caddy:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "MySQL",
         "description": "The most popular open-source database",
         "categories": [
@@ -1340,67 +1405,6 @@
           {
             "name": "owner_api_password",
             "label": "API Password"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Nginx",
-        "description": "High performance web server",
-        "categories": [
-          "WebServer"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
-        "image": "nginx:latest",
-        "ports": [
-          "80/tcp",
-          "443/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/etc/nginx"
-          },
-          {
-            "container": "/usr/share/nginx/html"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Httpd",
-        "description": "Open-source HTTP server",
-        "categories": [
-          "WebServer"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/httpd.png",
-        "image": "httpd:latest",
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/usr/local/apache2/htdocs/"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Caddy",
-        "description": "Open-source web server with automatic HTTPS written in Go",
-        "categories": [
-          "WebServer"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-        "image": "caddy:latest",
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
           }
         ]
       }
