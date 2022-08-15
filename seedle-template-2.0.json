@@ -3,13 +3,14 @@
     "templates": [
       {
         "type": 1,
+        "name": "A",
         "title": "Registry",
         "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
         "categories": [
           "docker"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+        "logo": "https://github.com/AcidicMonkeys/Seedle/blob/main/images/docker/registry.png",
         "image": "registry:latest",
         "ports": [
           "5000/tcp"
@@ -25,7 +26,7 @@
         "title": "Ubuntu",
         "description": "Debian-based Linux operating system",
         "categories": [
-          "operating-system"
+          "os"
         ],
         "platform": "linux",
         "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
