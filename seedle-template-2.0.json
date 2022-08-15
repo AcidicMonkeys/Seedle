@@ -48,7 +48,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
         "hostname": "nodejs-alpine",
-        "image": "node:18-alpine3.15",
+        "image": "node:current-alpine",
         "interactive": true,
         "command": "/bin/ash"
       },
@@ -78,7 +78,7 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
         "hostname": "python-alpine",
-        "image": "python:alpine",
+        "image": "python:3.11.0rc1-alpine3.16",
         "interactive": true,
         "command": "/bin/ash"
       },
