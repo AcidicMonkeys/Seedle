@@ -28,7 +28,7 @@
         "name": "NodeJS-Debian",
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
-          "runtime environment"
+          "Runtime Environment"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/node.png",
@@ -43,7 +43,7 @@
         "name": "NodeJS-Debian-Slim",
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
-          "runtime environment"
+          "Runtime Environment"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/node.png",
@@ -58,7 +58,7 @@
         "name": "NodeJS-Alpine",
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
-          "runtime environment"
+          "Runtime Environment"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/node.png",
@@ -73,7 +73,7 @@
         "name": "Python-Debian",
         "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "categories": [
-          "runtime environment"
+          "Runtime Environment"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/python.png",
@@ -88,7 +88,7 @@
         "name": "Python-Debian-Slim",
         "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "categories": [
-          "runtime environment"
+          "Runtime Environment"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/python.png",
@@ -103,7 +103,7 @@
         "name": "Python-Alpine",
         "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "categories": [
-          "runtime environment"
+          "Runtime Environment"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/re/python.png",
@@ -118,7 +118,7 @@
         "name": "Alpine",
         "description": "Alpine Linux is a Linux distribution designed to be small, simple and secure. Unlike most other Linux distributions, Alpine uses musl and BusyBox instead of the more commonly used Glibc and GNU Core Utilities and OpenRC for its init system instead of systemd.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/alpine.png",
@@ -133,7 +133,7 @@
         "name": "AmazonLinux",
         "description": "Amazon Linux provides a stable, secure, and high-performance execution environment for applications.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/amazonlinux.png",
@@ -148,7 +148,7 @@
         "name": "ArchLinux",
         "description": "Arch Linux is an independently developed, x86-64 general-purpose Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model. The default installation is a minimal base system, configured by the user to only add what is purposely required.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/archlinux.png",
@@ -163,7 +163,7 @@
         "name": "Debian",
         "description": "Debian, also known as Debian GNU/Linux, is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project, which was established by Ian Murdock on August 16, 1993.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
@@ -178,7 +178,7 @@
         "name": "Debian-Stable",
         "description": "Debian, also known as Debian GNU/Linux, is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project, which was established by Ian Murdock on August 16, 1993.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
@@ -193,7 +193,7 @@
         "name": "Debian-Stable-Slim",
         "description": "Debian, also known as Debian GNU/Linux, is a Linux distribution composed of free and open-source software, developed by the community-supported Debian Project, which was established by Ian Murdock on August 16, 1993.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/debian.png",
@@ -208,7 +208,7 @@
         "name": "OracleLinux",
         "description": "Oracle Linux is a Linux distribution packaged and freely distributed by Oracle, available partially under the GNU General Public License since late 2006. It is compiled from Red Hat Enterprise Linux source code, replacing Red Hat branding with Oracle's.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/oraclelinux.png",
@@ -223,7 +223,7 @@
         "name": "OracleLinux-Slim",
         "description": "Oracle Linux is a Linux distribution packaged and freely distributed by Oracle, available partially under the GNU General Public License since late 2006. It is compiled from Red Hat Enterprise Linux source code, replacing Red Hat branding with Oracle's.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/oraclelinux.png",
@@ -238,7 +238,7 @@
         "name": "Ubuntu",
         "description": "Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. Ubuntu is officially released in three editions: Desktop, Server, and Core for Internet of things devices and robots.",
         "categories": [
-          "os"
+          "Operative System"
         ],
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/ubuntu.png",
