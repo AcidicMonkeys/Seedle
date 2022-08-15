@@ -97,6 +97,27 @@
         ]
       },
       {
+        "type": 1,
+        "title": "Plone",
+        "name": "Plone",
+        "description": "Plone is a free and open source content management system built on top of the Zope application server. Plone is positioned as an enterprise CMS and is commonly used for intranets and as part of the web presence of large organizations.",
+        "categories": [
+          "CMS"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/cms/plone.png",
+        "hostname": "plone",
+        "image": "plone:latest",
+        "ports": [
+          "8080/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ]
+      },
+      {
         "type": 2,
         "title": "WordPress",
         "name": "WordPress",
@@ -143,23 +164,51 @@
         ]
       },
       {
-        "type": 1,
-        "title": "Plone",
-        "name": "Plone",
-        "description": "Plone is a free and open source content management system built on top of the Zope application server. Plone is positioned as an enterprise CMS and is commonly used for intranets and as part of the web presence of large organizations.",
+        "type": 3,
+        "title": "OpenAMT",
+        "name": "OpenAMT",
+        "description": "Open Active Management Technology Cloud Toolkit (Open AMT Cloud Toolkit) provides open-source, modular microservices and libraries for integration of Intel® Active Management Technology.",
         "categories": [
-          "CMS"
+          "Cloud"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/cms/plone.png",
-        "hostname": "plone",
-        "image": "plone:latest",
-        "ports": [
-          "8080/tcp"
-        ],
-        "volumes": [
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/cloud/openamt.png",
+        "hostname": "openamt",
+        "repository": {
+          "url": "https://github.com/portainer/templates",
+          "stackfile": "stacks/openamt/docker-compose.yml"
+        },
+        "env": [
           {
-            "container": "/data"
+            "name": "POSTGRES_USER",
+            "label": "Database user"
+          },
+          {
+            "name": "POSTGRES_PASSWORD",
+            "label": "Database password"
+          },
+          {
+            "name": "MPS_USER",
+            "label": "MPS user"
+          },
+          {
+            "name": "MPS_PASSWORD",
+            "label": "MPS password"
+          },
+          {
+            "name": "MPS_COMMON_NAME",
+            "label": "MPS URL",
+            "description": "Used to connect to the MPS API."
+          },
+          {
+            "name": "MPS_SECRET",
+            "label": "MPS Secret",
+            "description": "Strong secret key used to log into MPS."
+          },
+          {
+            "name": "VAULT_SECRET",
+            "label": "Vault secret",
+            "description": "Secret token used to log into Vault (don't include '.' character)."
           }
         ]
       },
@@ -286,36 +335,6 @@
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/oraclelinux.png",
         "hostname": "oraclelinux",
         "image": "oraclelinux:9",
-        "interactive": true,
-        "command": "/bin/bash"
-      },
-      {
-        "type": 1,
-        "title": "RockyLinux",
-        "name": "RockyLinux",
-        "description": "Rocky Linux is a Linux distribution developed by Rocky Enterprise Software Foundation. It is intended to be a downstream, complete binary-compatible release using the Red Hat Enterprise Linux operating system source code.",
-        "categories": [
-          "Operative System"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/rockylinux.png",
-        "hostname": "rockylinux",
-        "image": "rockylinux:9",
-        "interactive": true,
-        "command": "/bin/bash"
-      },
-      {
-        "type": 1,
-        "title": "RockyLinux (Minimal)",
-        "name": "RockyLinux-Minimal",
-        "description": "Rocky Linux is a Linux distribution developed by Rocky Enterprise Software Foundation. It is intended to be a downstream, complete binary-compatible release using the Red Hat Enterprise Linux operating system source code.",
-        "categories": [
-          "Operative System"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/rockylinux.png",
-        "hostname": "rockylinux-minimal",
-        "image": "rockylinux:9-minimal",
         "interactive": true,
         "command": "/bin/bash"
       },
@@ -1128,54 +1147,6 @@
           "url": "https://github.com/portainer/templates",
           "stackfile": "stacks/cockroachdb/docker-stack.yml"
         }
-      },
-      {
-        "type": 3,
-        "title": "OpenAMT",
-        "description": "OpenAMT Cloud Toolkit",
-        "note": "MPS password needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
-        "categories": [
-          "Cloud"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
-        "repository": {
-          "url": "https://github.com/portainer/templates",
-          "stackfile": "stacks/openamt/docker-compose.yml"
-        },
-        "env": [
-          {
-            "name": "POSTGRES_USER",
-            "label": "Database user"
-          },
-          {
-            "name": "POSTGRES_PASSWORD",
-            "label": "Database password"
-          },
-          {
-            "name": "MPS_USER",
-            "label": "MPS user"
-          },
-          {
-            "name": "MPS_PASSWORD",
-            "label": "MPS password"
-          },
-          {
-            "name": "MPS_COMMON_NAME",
-            "label": "MPS URL",
-            "description": "Used to connect to the MPS API."
-          },
-          {
-            "name": "MPS_SECRET",
-            "label": "MPS Secret",
-            "description": "Strong secret key used to log into MPS."
-          },
-          {
-            "name": "VAULT_SECRET",
-            "label": "Vault secret",
-            "description": "Secret token used to log into Vault (don't include '.' character)."
-          }
-        ]
       },
       {
         "type": 2,
