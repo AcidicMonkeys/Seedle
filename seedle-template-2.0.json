@@ -1241,6 +1241,31 @@
       },
       {
         "type": 1,
+        "title": "File Browser",
+        "name": "File-Browser",
+        "description": "FileBrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory. It can be used as a standalone app.",
+        "categories": [
+          "Storage"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/filebrowser.png",
+        "hostname": "file-browser",
+        "image": "filebrowser/filebrowser:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          },
+          {
+            "container": "/srv"
+          }
+        ],
+        "command": "--port 80 --database /data/database.db --root /srv"
+      },
+      {
+        "type": 1,
         "title": "RabbitMQ",
         "description": "Highly reliable enterprise messaging system",
         "categories": [
@@ -1308,31 +1333,6 @@
             "container": "/usr/src/redmine/files"
           }
         ]
-      },
-      {
-        "type": 1,
-        "title": "File browser",
-        "description": "A web file manager",
-        "note": "Default credentials: admin/admin",
-        "categories": [
-          "filesystem",
-          "Storage"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
-        "image": "filebrowser/filebrowser:latest",
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
-          },
-          {
-            "container": "/srv"
-          }
-        ],
-        "command": "--port 80 --database /data/database.db --root /srv"
       },
       {
         "type": 2,
