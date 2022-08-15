@@ -1214,6 +1214,31 @@
       },
       {
         "type": 1,
+        "title": "File Browser",
+        "name": "File-Browser",
+        "description": "FileBrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory. It can be used as a standalone app.",
+        "categories": [
+          "Storage"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/filebrowser.png",
+        "hostname": "file-browser",
+        "image": "filebrowser/filebrowser:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          },
+          {
+            "container": "/srv"
+          }
+        ],
+        "command": "--port 80 --database /data/database.db --root /srv"
+      },
+      {
+        "type": 1,
         "title": "Minio",
         "name": "Minio",
         "description": "MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service. It can handle unstructured data such as photos, videos, log files, backups, and container images with the maximum supported object size of 5TB.",
@@ -1250,50 +1275,6 @@
       },
       {
         "type": 1,
-        "title": "NextCloud",
-        "name": "NextCloud",
-        "description": "Nextcloud is a suite of client-server software for creating and using file hosting services. It is enterprise-ready with comprehensive support options. Being free and open-source software, anyone is allowed to install and operate it on their own private server devices.",
-        "categories": [
-          "Storage"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/nextcloud.png",
-        "hostname": "nextcloud",
-        "image": "linuxserver/nextcloud:latest",
-        "env": [
-          {
-            "name": "PUID",
-            "label": "PUID",
-            "default": "1000"
-          },
-          {
-            "name": "PGID",
-            "label": "PGID",
-            "default": "1000"
-          },
-          {
-            "name": "TZ",
-            "label": "TZ",
-            "default": "Europe/London"
-          }
-        ],
-        "ports": [
-          "443:443/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/config",
-            "bind": "/volume1/docker/nextcloud/config"
-          },
-          {
-            "container": "/data",
-            "bind": "/volume1/docker/nextcloud/data"
-          }
-        ],
-        "restart_policy": "unless-stopped"
-      },
-      {
-        "type": 1,
         "title": "Scality S3",
         "name": "Scality-S3",
         "description": "What is S3 Scality? S3 Compatible Storage is a storage solution that allows access to and management of the data it stores over an S3 compliant interface.",
@@ -1325,31 +1306,6 @@
             "container": "/usr/src/app/localMetadata"
           }
         ]
-      },
-      {
-        "type": 1,
-        "title": "File Browser",
-        "name": "File-Browser",
-        "description": "FileBrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files. It allows the creation of multiple users and each user can have its own directory. It can be used as a standalone app.",
-        "categories": [
-          "Storage"
-        ],
-        "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/storage/filebrowser.png",
-        "hostname": "file-browser",
-        "image": "filebrowser/filebrowser:latest",
-        "ports": [
-          "80/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
-          },
-          {
-            "container": "/srv"
-          }
-        ],
-        "command": "--port 80 --database /data/database.db --root /srv"
       },
       {
         "type": 1,
