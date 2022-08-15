@@ -46,9 +46,24 @@
           "runtime environment"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/node.png",
         "hostname": "nodejs",
         "image": "node:latest",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "Python",
+        "name": "Python",
+        "description": "Python is a high-level, interpreted, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
+        "categories": [
+          "runtime environment"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/python.png",
+        "hostname": "python",
+        "image": "python:latest",
         "interactive": true,
         "command": "/bin/bash"
       },
