@@ -346,6 +346,27 @@
       },
       {
         "type": 1,
+        "title": "Redis",
+        "name": "Redis",
+        "description": "Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices.",
+        "categories": [
+          "Database"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/redis.png",
+        "hostname": "redis",
+        "image": "redis:latest",
+        "ports": [
+          "6379/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/data"
+          }
+        ]
+      },
+      {
+        "type": 1,
         "title": "CrateDB",
         "name": "CrateDB",
         "description": "CrateDB is a distributed SQL database management system that integrates a fully searchable document-oriented data store. It is open-source, written in Java, based on a shared-nothing architecture, and designed for high scalability. CrateDB includes components from Trino, Lucene, Elasticsearch and Netty.",
@@ -368,14 +389,16 @@
       },
       {
         "type": 1,
-        "title": "SQL Server",
-        "description": "Microsoft SQL Server on Linux",
+        "title": "Microsoft SQL Server",
+        "name": "Microsoft-SQL-Server",
+        "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.",
         "categories": [
           "Database"
         ],
         "platform": "linux",
         "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
+        "hostname": "microsoft-sql-server",
         "image": "mcr.microsoft.com/mssql/server:2019-latest",
         "ports": [
           "1433/tcp"
@@ -394,14 +417,16 @@
       },
       {
         "type": 1,
-        "title": "SQL Server",
-        "description": "Microsoft SQL Server Developer for Windows containers",
+        "title": "Microsoft SQL Server",
+        "name": "Microsoft-SQL-Server",
+        "description": "Microsoft SQL Server is a relational database management system developed by Microsoft. As a database server, it is a software product with the primary function of storing and retrieving data as requested by other software applications—which may run either on the same computer or on another computer across a network.",
         "categories": [
           "Database"
         ],
         "platform": "windows",
         "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
+        "hostname": "microsoft-sql-server",
         "image": "microsoft/mssql-server-windows-developer:latest",
         "ports": [
           "1433/tcp"
@@ -426,13 +451,15 @@
       {
         "type": 1,
         "title": "SQL Server Express",
-        "description": "Microsoft SQL Server Express for Windows containers",
+        "name": "SQL-Server-Express",
+        "description": "SQL Server Express is a free edition of SQL Server, ideal for development and production for desktop, web and small server applications.",
         "categories": [
           "Database"
         ],
         "platform": "windows",
         "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
+        "hostname": "sql-server-express",
         "image": "microsoft/mssql-server-windows-express:latest",
         "ports": [
           "1433/tcp"
@@ -451,25 +478,6 @@
         "volumes": [
           {
             "container": "C:/temp/"
-          }
-        ]
-      },
-      {
-        "type": 1,
-        "title": "Redis",
-        "description": "Open-source in-memory data structure store",
-        "categories": [
-          "Database"
-        ],
-        "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
-        "image": "redis:latest",
-        "ports": [
-          "6379/tcp"
-        ],
-        "volumes": [
-          {
-            "container": "/data"
           }
         ]
       },
@@ -1060,7 +1068,7 @@
           "Search Engine"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/serach-engine/elasticsearch.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/search-engine/elasticsearch.png",
         "hostname": "elasticsearch",
         "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
         "ports": [
@@ -1082,7 +1090,7 @@
           "Search Engine"
         ],
         "platform": "linux",
-        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/seach-engine/solr.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/search-engine/solr.png",
         "hostname": "solr",
         "image": "solr:latest",
         "ports": [
@@ -1376,7 +1384,7 @@
           "OPS"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/microsoft.png",
         "repository": {
           "url": "https://github.com/portainer/templates",
           "stackfile": "stacks/microsoft-oms/docker-stack.yml"
