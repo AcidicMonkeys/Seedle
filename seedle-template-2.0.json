@@ -803,12 +803,14 @@
       {
         "type": 1,
         "title": "MariaDB",
-        "description": "Performance beyond MySQL",
+        "name": "MariaDB",
+        "description": "MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, intended to remain free and open-source software under the GNU General Public License.",
         "categories": [
           "Database"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/database/mariadb.png",
+        "hostname": "mariadb",
         "image": "mariadb:latest",
         "env": [
           {
