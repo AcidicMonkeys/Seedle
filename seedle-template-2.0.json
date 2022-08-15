@@ -40,12 +40,14 @@
       {
         "type": 1,
         "title": "NodeJS",
-        "description": "JavaScript-based platform for server-side and networking applications",
+        "name": "NodeJS",
+        "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on a JavaScript Engine and executes JavaScript code outside a web browser, which was designed to build scalable network applications.",
         "categories": [
-          "development"
+          "runtime environment"
         ],
         "platform": "linux",
         "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
+        "hostname": "nodejs",
         "image": "node:latest",
         "interactive": true,
         "command": "/bin/bash"
