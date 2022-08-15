@@ -228,7 +228,22 @@
         "platform": "linux",
         "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/rockylinux.png",
         "hostname": "rockylinux",
-        "image": "rockylinux:latest",
+        "image": "rockylinux:9",
+        "interactive": true,
+        "command": "/bin/bash"
+      },
+      {
+        "type": 1,
+        "title": "RockyLinux (Minimal)",
+        "name": "RockyLinux-Minimal",
+        "description": "Rocky Linux is a Linux distribution developed by Rocky Enterprise Software Foundation. It is intended to be a downstream, complete binary-compatible release using the Red Hat Enterprise Linux operating system source code.",
+        "categories": [
+          "Operative System"
+        ],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/AcidicMonkeys/Seedle/main/images/docker/os/rockylinux.png",
+        "hostname": "rockylinux-minimal",
+        "image": "rockylinux:9-minimal",
         "interactive": true,
         "command": "/bin/bash"
       },
