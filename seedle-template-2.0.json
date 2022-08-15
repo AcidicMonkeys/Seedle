@@ -4,6 +4,7 @@
       {
         "type": 1,
         "title": "Registry",
+        "name": "Registry",
         "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images.",
         "categories": [
           "docker"
